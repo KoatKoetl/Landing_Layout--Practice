@@ -1,0 +1,94 @@
+@import '~normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap');
+
+body {
+  background-color: rgb(37, 43, 66);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.one-line-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 800;
+  color: white;
+  padding: 1rem 15%;
+}
+
+.one-line-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.one-line-header-left .header-brand-name {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.one-line-header-left .nav-menu-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-menu-links li {
+  margin-left: 2rem;
+}
+
+.nav-menu-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.one-line-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.one-line-header-right .nav-menu-login button {
+  color: white;
+  font-weight: 800;
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+}
+
+.one-line-header-right .nav-menu-sign-in button {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 1.2rem 1.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: rgb(35, 166, 240);
+  margin-left: 2rem;
+  min-width: max-content;
+}
+
+.nav-menu-sign-in iconify-icon {
+  margin-left: 1rem;
+}
+
+.one-line-header .burger-icon iconify-icon {
+  font-size: 2rem;
+  display: none;
+}
+
+@media screen and (max-width: 1600px) {
+  .one-line-header-right {
+    display: none;
+  }
+  .one-line-header .burger-icon iconify-icon {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .one-line-header {
+    padding: 1rem 10%;
+  }
+  .one-line-header-left .nav-menu-links {
+    display: none;
+  }
+}
