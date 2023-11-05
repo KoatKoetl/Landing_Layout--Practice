@@ -1,10 +1,10 @@
 import './CSS/style.css';
-import { burgerMenu } from './toggleBurgerMenu';
+import { burgerMenu } from './headerBurgerMenu';
 
-function enableBurgerMenu() {
+function enableHeaderBurgerMenu() {
   burgerMenu.toggleBurgerMenu();
   burgerMenu.hideMenuOnResize();
   burgerMenu.closeMenu();
 }
 
-enableBurgerMenu();
+enableHeaderBurgerMenu();
