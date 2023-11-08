@@ -234,12 +234,12 @@ body {
   margin: 3rem 0;
   font-size: 4rem;
   font-weight: 700;
-  max-width: 100vh;
+  max-width: 70dvh;
   line-height: 1.5em;
 }
 
 .container.info .text.quote {
-  max-width: 100vh;
+  max-width: 70dvh;
   padding-bottom: 3rem;
   line-height: 2em;
 }
@@ -275,7 +275,12 @@ body {
 
 @media screen and (max-width: 425px) {
   .container.info .text.headline-text {
+    margin: 2rem 0;
     font-size: 2em;
+  }
+  .container.info .text.quote .quote-text {
+    font-size: 1rem;
+    padding-bottom: 2rem;
   }
 }
 
