@@ -1,83 +1,83 @@
 @import '~normalize.css/normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800&display=swap');
 
 body {
   background-color: rgb(37, 43, 66);
   font-family: 'Montserrat', sans-serif;
   margin: 0 10%;
   position: relative;
+  color: white;
 }
 
-/* One line header start */
+/* Main header start */
 
-.one-line-header {
+.header.main-header {
   display: flex;
   justify-content: space-between;
   font-weight: 800;
   color: white;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
-.one-line-header-left {
+.header.main-header .nav.left-block {
   display: flex;
   align-items: center;
 }
 
-.one-line-header-left .header-brand-name {
-  padding: 1rem;
+.nav.left-block .brand-name {
   font-size: 2rem;
+  padding: 1rem 0;
 }
 
-.one-line-header-left .nav-menu-links ul {
+.nav.left-block .nav-links-list ul {
   display: flex;
   list-style-type: none;
 }
 
-.one-line-header-left .nav-menu-links li {
+.nav.left-block .nav-links-list li {
   margin-left: 1rem;
 }
 
-.one-line-header-left .nav-menu-links a {
+.nav.left-block .nav-links-list a {
   color: white;
   text-decoration: none;
   padding: 1rem;
 }
 
-.one-line-header-left .nav-menu-links a:hover {
+.nav.left-block .nav-links-list a:hover {
   color: rgb(35, 166, 240);
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
 
-.one-line-header-left .nav-menu-links a:active {
+.nav.left-block .nav-links-list a:active {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.one-line-header-right {
+.header.main-header .nav.right-block {
   display: flex;
   align-items: center;
 }
 
-.one-line-header-right .nav-menu-login button {
+.nav.button-login a {
   color: white;
   font-weight: 800;
   padding: 1rem;
   border: none;
-  background-color: transparent;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-.nav-menu-login button:hover {
+.nav.right-block .nav.button-login a:hover {
   color: rgb(35, 166, 240);
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
 
-.nav-menu-login button:active {
-  transform: scale(1.2);
+.nav.right-block .nav.button-login a:active {
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.one-line-header-right .nav-menu-sign-in button {
+.nav.button-signIn button {
   display: flex;
   align-items: center;
   color: white;
@@ -92,38 +92,38 @@ body {
   cursor: pointer;
 }
 
-.nav-menu-sign-in button:hover {
+.nav.right-block .nav.button-signIn button:hover {
   transition-duration: 0.5s;
   background-color: transparent;
 }
 
-.nav-menu-sign-in button:active {
+.nav.right-block .nav.button-signIn button:active {
   transition-duration: 0.1s;
   background-color: rgb(35, 166, 240);
 }
 
-.burger-menu {
+.button.dropDown-menu {
   display: none;
   align-items: center;
 }
 
-.burger-menu .burger-icon {
+.button.dropDown-menu .icon.burger-icon {
   cursor: pointer;
   padding: 0.5rem;
   font-size: 1.5rem;
 }
 
-.burger-icon:hover {
+.button.dropDown-menu .icon.burger-icon:hover {
   transform: scale(1.2);
   transition: 0.5s;
 }
 
-.burger-icon:active {
+.button.dropDown-menu .icon.burger-icon:active {
   transform: scale(1);
   transition: 0.3s;
 }
 
-.dropdown-items {
+.menu.dropDown-menu {
   display: flex;
   gap: 1rem;
   opacity: 0;
@@ -136,7 +136,7 @@ body {
   transition: opacity 0.3s, visibility 0.5s;
 }
 
-.dropdown-items .left-side-items {
+.menu.dropDown-menu .nav.left-block {
   opacity: 0;
   visibility: hidden;
   width: 0;
@@ -144,21 +144,21 @@ body {
   transition: opacity 1s;
 }
 
-.dropdown-items .right-side-items {
+.menu.dropDown-menu .nav.right-block {
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s, visibility 0.5s;
   margin: 1rem;
 }
 
-.dropdown-items .close-menu {
+.menu.dropDown-menu .button.close {
   position: relative;
   color: white;
   padding-top: 0.3rem;
   text-align: right;
 }
 
-.close-menu .close-menu-icon {
+.button.close .icon.close-icon {
   position: absolute;
   cursor: pointer;
   font-size: 1.2rem;
@@ -166,53 +166,117 @@ body {
   right: 0;
 }
 
-.close-menu-icon:hover {
+.button.close .icon.close-icon:hover {
   transform: scale(0.9);
 }
 
-.close-menu-icon:active {
+.button.close .icon.close-icon:active {
   transform: scale(1);
 }
 
-.dropdown-items a {
+.menu.dropDown-menu a {
   color: white;
   text-decoration: none;
   font-weight: 800;
   font-size: 1.2rem;
 }
 
-.dropdown-items a:hover {
+.menu.dropDown-menu a:hover {
   text-decoration: underline;
   text-underline-offset: 0.5rem;
 }
 
-.dropdown-items ul {
+.menu.dropDown-menu ul {
   list-style-type: none;
   padding: 0;
 }
 
-.dropdown-items li {
+.menu.dropDown-menu li {
   padding: 0.5rem 0;
 }
 
-@media screen and (max-width: 1200px) {
-  .one-line-header .one-line-header-right {
+@media screen and (max-width: 1350px) {
+  .header.header.main-header .nav.right-block {
     display: none;
   }
-  .one-line-header .burger-menu {
+  .header.header.main-header .button.dropDown-menu {
     display: flex;
   }
 }
 
 @media screen and (max-width: 960px) {
-  .one-line-header .one-line-header-left .nav-menu-links {
+  body {
+    margin: 0 5%;
+  }
+  .header.main-header .nav.left-block .nav-links-list {
     display: none;
   }
-  .dropdown-items .left-side-items {
+  .menu.dropDown-menu .nav.left-block {
     margin: 1rem;
     width: auto;
     height: auto;
   }
 }
 
-/* One line header end */
+/* Main header end */
+
+/* Top container with info start */
+.container.info {
+  padding: 5% 0;
+}
+
+.container.info .text.greeting .greeting-message {
+  font-weight: 700;
+  color: rgb(35, 166, 240);
+}
+
+.container.info .text.headline-text {
+  margin: 3rem 0;
+  font-size: 4rem;
+  font-weight: 700;
+  max-width: 100vh;
+  line-height: 1.5em;
+}
+
+.container.info .text.quote {
+  max-width: 100vh;
+  padding-bottom: 3rem;
+  line-height: 2em;
+}
+
+.container.info .text.quote .quote-text {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.container.info .button .signIn-button {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1.2rem 1.5rem;
+  border: 2px solid rgb(35, 166, 240);
+  border-radius: 0.3rem;
+  background-color: rgb(35, 166, 240);
+  min-width: max-content;
+  cursor: pointer;
+}
+
+.container.info .button .signIn-button:hover {
+  transition-duration: 0.5s;
+  background-color: transparent;
+}
+
+.container.info .button .signIn-button:active {
+  transition-duration: 0.1s;
+  background-color: rgb(35, 166, 240);
+}
+
+@media screen and (max-width: 425px) {
+  .container.info .text.headline-text {
+    font-size: 2em;
+  }
+}
+
+/* Top container with info end*/
