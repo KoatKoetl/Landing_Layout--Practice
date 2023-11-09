@@ -5,9 +5,14 @@ body {
   background-color: rgb(37, 43, 66);
   font-family: 'Montserrat', sans-serif;
   color: white;
+}
+
+/* Main container */
+.container {
   position: relative;
 }
 
+/* Main container background image */
 .background.image {
   position: absolute;
   left: 0;
@@ -22,6 +27,8 @@ body {
   height: 100%;
 }
 
+/* Section welcome block start*/
+
 .container.welcome-block {
   position: relative;
   padding: 0 10%;
@@ -29,8 +36,6 @@ body {
   background: linear-gradient(90deg, #000 0.13%, #000 0.14%, rgba(0, 0, 0, 0) 99.56%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-
-/* Main header start */
 
 .header.main-header {
   display: flex;
@@ -150,6 +155,7 @@ body {
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  z-index: 2;
   right: 10%;
   padding: 0.3rem;
   border-radius: 0.3rem;
@@ -308,4 +314,16 @@ body {
   }
 }
 
-/* Top container with info end*/
+/* Section welcome block end*/
+
+/* Section cards start */
+
+.container.page-sections {
+  padding: 0 10%;
+}
+
+.container.cards {
+  padding: 10% 0;
+}
+
+/* Section cards end */
