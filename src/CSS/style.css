@@ -324,6 +324,100 @@ body {
 
 .container.cards {
   padding: 10% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.container.cards .main-content .text {
+  text-align: center;
+}
+
+.container.cards .main-content .text .text-content {
+  font-weight: 700;
+  color: rgb(35, 166, 240);
+  letter-spacing: 0.2px;
+}
+
+.container.cards .main-content .text .title {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0;
+  padding: 1rem 0;
+  letter-spacing: 0.2px;
+}
+
+.container.cards .main-content .text .quote:first-child {
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+}
+
+.container.cards .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.2rem 2.5rem;
+  gap: 1.5rem;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.cards .card .text {
+  display: flex;
+  justify-content: center;
+}
+
+.cards .card .text .title {
+  color: #252b42;
+  font-weight: 700;
+}
+
+.cards .card .text .text-content {
+  color: #737373;
+  font-weight: 400;
+  max-width: 50%;
+}
+
+.cards .card .icon-block {
+  display: flex;
+  justify-content: center;
+}
+
+.cards .card .icon-block .background {
+  padding: 1.4rem 1.2rem;
+  border-radius: 0.6rem;
+  background-color: #e74040;
+}
+
+.cards .card .icon-block .image {
+  width: 2rem;
+  height: 2rem;
+}
+
+.cards .card.card-1 .icon-block .image {
+  background-image: url(../assets/icon-heart.svg);
+}
+
+.cards .card.card-2 .icon-block .image {
+  background-image: url(../assets/icon-flag.svg);
+}
+
+@media screen and (max-width: 425px) {
+  .cards .card .text .text-content {
+    min-width: min-content;
+  }
 }
 
 /* Section cards end */
