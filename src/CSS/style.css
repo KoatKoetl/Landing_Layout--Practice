@@ -427,3 +427,73 @@ body {
 }
 
 /* Section cards end */
+
+/* Course review container start */
+
+.container.page-sections .container.course-review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10% 0;
+  gap: 2rem;
+}
+
+.container.course-review .sideblock.main-content {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.sideblock.main-content .element.divide-line {
+  max-width: 6rem;
+  height: 7px;
+  background-color: #e74040;
+}
+
+.sideblock.main-content .text .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.sideblock.main-content .text .quote-text {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+  line-height: 1.3rem;
+}
+
+.sideblock.main-content .link {
+  display: flex;
+}
+
+.sideblock.main-content .link a {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: rgb(35, 166, 240);
+  text-decoration: none;
+}
+
+.sideblock.main-content .link a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.sideblock.main-content .link a:active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sideblock.main-content .link .icon {
+  font-size: 1.5rem;
+}
+
+.container.course-review .sideblock.images {
+  width: max-content;
+  height: 507px;
+}
+
+/* Course review container end*/
