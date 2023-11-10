@@ -366,6 +366,7 @@ body {
 .cards .card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 2.2rem 2.5rem;
   gap: 1.5rem;
   background-color: white;
@@ -382,6 +383,11 @@ body {
 .cards .card .text .title {
   color: #252b42;
   font-weight: 700;
+}
+
+.cards .card .element.divide-line {
+  border: 1px solid #e74040;
+  min-width: 3.2rem;
 }
 
 .cards .card .text .text-content {
