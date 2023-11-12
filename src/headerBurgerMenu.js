@@ -74,7 +74,12 @@ class BurgerMenu {
     });
   }
 
-  logInConsole() {}
+  enableHeaderBurgerMenu() {
+    burgerMenu.toggleBurgerMenu();
+    burgerMenu.hideMenuOnResize();
+    burgerMenu.closeMenu();
+    burgerMenu.logInConsole();
+  }
 }
 
 const burgerMenu = new BurgerMenu();
