@@ -492,8 +492,76 @@ body {
 }
 
 .container.course-review .sideblock.images {
-  width: max-content;
+  width: 401px;
   height: 507px;
+  position: relative;
+}
+
+.sideblock.images .main-image {
+  width: 408px;
+  height: 408px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 83px;
+  z-index: 0;
+  background-image: url(../assets/man-in-glasses.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: #00087e 30px 22px;
+}
+
+.sideblock.images .image.round-graphic {
+  background-image: url(../assets/round-graphics.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 247px;
+  height: 247px;
+  position: absolute;
+  bottom: 0;
+  left: 76px;
+  z-index: 1;
+}
+
+.sideblock.images .image.rating {
+  width: 115px;
+  height: 58px;
+  background-image: url(../assets/rating.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  right: -100px;
+  top: 80px;
+}
+
+@media screen and (max-width: 507px) {
+  .container.course-review .sideblock.images {
+    width: 80lvw;
+    height: 320px;
+  }
+  .sideblock.images .main-image {
+    height: 250px;
+    width: 250px;
+    background-size: 250px;
+  }
+  .sideblock.images .image.round-graphic {
+    width: 123px;
+    height: 123px;
+    background-size: 123px;
+  }
+  .sideblock.images .image.image.rating {
+    right: -30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .sideblock.images .image.image.rating {
+    top: 0;
+  }
 }
 
 /* Course review container end*/
