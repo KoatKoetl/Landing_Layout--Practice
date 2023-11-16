@@ -78,7 +78,6 @@ class BurgerMenu {
     burgerMenu.toggleBurgerMenu();
     burgerMenu.hideMenuOnResize();
     burgerMenu.closeMenu();
-    burgerMenu.logInConsole();
   }
 }
 
