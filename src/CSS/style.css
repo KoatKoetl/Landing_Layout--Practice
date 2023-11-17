@@ -606,12 +606,17 @@ h6 {
   line-height: 20px;
 }
 
+.cards {
+  display: grid;
+  justify-content: center;
+}
+
 .cards__carousel {
   display: flex;
   gap: 15px;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
-  max-width: 710px;
+  width: 710px;
 }
 
 .cards__card--active {
@@ -862,9 +867,18 @@ h6 {
   }
 }
 
-@media (width < 425px) {
+@media screen and (max-width: 750px) {
+  .cards__carousel {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 425px) {
   .cards__card {
     flex-basis: 290px;
+  }
+  .cards__carousel {
+    width: 290px;
   }
 }
 
