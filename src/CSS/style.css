@@ -540,8 +540,8 @@ h6 {
 .sideblock.images .image.rating {
   position: absolute;
   z-index: 2;
-  top: 80px;
-  right: -100px;
+  top: 50px;
+  right: 0px;
   width: 115px;
   height: 58px;
   background-image: url(../assets/rating.svg);
@@ -552,8 +552,12 @@ h6 {
 
 @media screen and (max-width: 600px) {
   .container--course-review .sideblock.images {
-    width: 80lvw;
+    max-width: 80lvw;
     height: 320px;
+  }
+  .sideblock.images .image.rating {
+    right: 10%;
+    top: 0;
   }
   .sideblock.images .main-image {
     width: 250px;
@@ -565,13 +569,11 @@ h6 {
     height: 123px;
     background-size: 123px;
   }
-  .sideblock.images .image.image.rating {
-    right: -30px;
-  }
 }
 
 @media screen and (max-width: 425px) {
   .sideblock.images .image.image.rating {
+    right: -15px;
     top: 0;
   }
 }
