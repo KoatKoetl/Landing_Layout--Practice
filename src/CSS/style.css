@@ -552,12 +552,12 @@ h6 {
 
 @media screen and (max-width: 600px) {
   .container--course-review .sideblock.images {
-    max-width: 80lvw;
     height: 320px;
+    max-width: 80lvw;
   }
   .sideblock.images .image.rating {
-    right: 10%;
     top: 0;
+    right: 10%;
   }
   .sideblock.images .main-image {
     width: 250px;
@@ -573,8 +573,8 @@ h6 {
 
 @media screen and (max-width: 425px) {
   .sideblock.images .image.image.rating {
-    right: -15px;
     top: 0;
+    right: -15px;
   }
 }
 
@@ -608,17 +608,12 @@ h6 {
   line-height: 20px;
 }
 
-.cards {
-  display: grid;
-  justify-content: center;
-}
-
 .cards__carousel {
   display: flex;
   gap: 15px;
+  width: 710px;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
-  width: 710px;
 }
 
 .cards__card--active {
@@ -627,7 +622,6 @@ h6 {
 
 .cards__card {
   flex: 1 0 330px;
-  scroll-snap-align: start;
   scroll-margin: 5px;
 }
 
@@ -706,8 +700,8 @@ h6 {
   display: grid;
   grid-gap: 10px;
   padding: 25px 25px 35px 25px;
-  background-color: white;
   max-width: 330px;
+  background-color: white;
 }
 
 .cards__header-text {
@@ -840,33 +834,27 @@ h6 {
 
 .cards__button--small {
   display: flex;
-  padding: 10px 20px;
-  align-items: center;
   gap: 10px;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
   border: 1px solid rgb(35, 166, 240);
   border-radius: 37px;
-  background-color: transparent;
 }
 
 .cards__button-text {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 171.429% */
-  letter-spacing: 0.2px;
   color: rgb(35, 166, 240);
+  letter-spacing: 0.2px;
+  line-height: 24px; /* 171.429% */
 }
 
 .cards__button-icon {
-  background-image: url(../assets/icn-arrow-right.svg);
-  height: 16px;
   width: 9px;
-}
-
-@media (pointer: none), (pointer: coarse) {
-  .cards__carousel {
-    overflow-x: scroll;
-  }
+  height: 16px;
+  background-image: url(../assets/icn-arrow-right.svg);
 }
 
 @media screen and (max-width: 750px) {
@@ -884,4 +872,119 @@ h6 {
   }
 }
 
+.testimonials {
+  display: grid;
+  justify-content: center;
+}
+
+.testimonials__carousel {
+  display: flex;
+  gap: 15px;
+  max-width: 50dvw;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.cards__card--active {
+  scroll-snap-type: unset;
+}
+
+.testimonials__item {
+  flex: 1 0 400px;
+  padding: 25px 25px 0 25px;
+  background-color: white;
+  scroll-margin: 5px;
+}
+
+.testimonials__user-cover {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials__user-cover-image {
+  background-image: url(../assets/testimonial-user-cover-150.png);
+}
+
+.testimonials__content {
+  display: grid;
+  grid-gap: 15px;
+  padding: 30px;
+}
+
+.testimonials__text-content {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  max-width: 50%;
+  justify-self: center;
+}
+
+.testimonials__rating {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.testimonials__rating-icon {
+  width: 22px;
+  height: 22px;
+  background-image: url(../assets/icn-bxs-full-star.svg);
+}
+
+.testimonials__rating-icon.cards__rating-icon--empty {
+  background-image: url(../assets/icn-empty-star.svg);
+}
+
+.testimonials__employee-fullName {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  color: #252b42;
+  text-align: center;
+  letter-spacing: 0.1px;
+  line-height: 24px; /* 150% */
+}
+
+.testimonials__employee-position {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  color: #737373;
+  text-align: center;
+  letter-spacing: 0.2px;
+  line-height: 24px; /* 171.429% */
+}
 /* Course review container end*/
+@media (pointer: none), (pointer: coarse) {
+  .cards__carousel {
+    overflow-x: scroll;
+  }
+  .testimonials__carousel {
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .testimonials__item {
+    flex-basis: fit-content;
+  }
+  .testimonials__carousel {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .testimonials__item {
+    flex-basis: 290px;
+    padding: 0;
+  }
+  .testimonials__content {
+    padding: 30px 0;
+  }
+  .testimonials__carousel {
+    max-width: 290px;
+  }
+}
