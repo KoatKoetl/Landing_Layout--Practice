@@ -610,6 +610,10 @@ h6 {
   justify-self: center;
 }
 
+.cards {
+  justify-self: center;
+}
+
 .cards__carousel {
   display: flex;
   gap: 15px;
