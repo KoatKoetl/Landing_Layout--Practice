@@ -231,32 +231,6 @@ h6 {
   padding: 0.5rem 0;
 }
 
-@media screen and (max-width: 1350px) {
-  .header.header.main-header .nav.right-block {
-    display: none;
-  }
-  .header.header.main-header .button.dropDown-menu {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .container--primary.welcome-block {
-    padding: 0 5%;
-  }
-  .menu.dropDown-menu {
-    right: 5%;
-  }
-  .header.main-header .nav.left-block .nav-links-list {
-    display: none;
-  }
-  .menu.dropDown-menu .nav.left-block {
-    margin: 1rem;
-    width: auto;
-    height: auto;
-  }
-}
-
 /* Main header end */
 
 /* Top container with info start */
@@ -310,17 +284,6 @@ h6 {
 .container--info .button .signIn-button:active {
   background-color: rgb(35, 166, 240);
   transition-duration: 0.1s;
-}
-
-@media screen and (max-width: 425px) {
-  .container--info .text.headline-text {
-    font-size: 2em;
-    margin: 2rem 0;
-  }
-  .container--info .text.quote .quote-text {
-    font-size: 1rem;
-    padding-bottom: 2rem;
-  }
 }
 
 /* Section welcome block end*/
@@ -427,15 +390,6 @@ h6 {
 
 .cards .card.card-2 .icon-block .image {
   background-image: url(../assets/icon-flag.svg);
-}
-
-@media screen and (max-width: 425px) {
-  .cards .card .text .text-content {
-    min-width: min-content;
-  }
-  .container--page-sections {
-    padding: 0 5%;
-  }
 }
 
 /* Section cards end */
@@ -548,34 +502,6 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-@media screen and (max-width: 600px) {
-  .container--course-review .sideblock.images {
-    height: 320px;
-    max-width: 80lvw;
-  }
-  .sideblock.images .image.rating {
-    top: 0;
-    right: 10%;
-  }
-  .sideblock.images .main-image {
-    width: 250px;
-    height: 250px;
-    background-size: 250px;
-  }
-  .sideblock.images .image.round-graphic {
-    width: 123px;
-    height: 123px;
-    background-size: 123px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .sideblock.images .image.image.rating {
-    top: 0;
-    right: -15px;
-  }
 }
 
 .container {
@@ -863,21 +789,6 @@ h6 {
   background-image: url(../assets/icn-arrow-right.svg);
 }
 
-@media screen and (max-width: 750px) {
-  .cards__carousel {
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .cards__card {
-    flex-basis: 290px;
-  }
-  .cards__carousel {
-    width: 290px;
-  }
-}
-
 .testimonials {
   display: grid;
   justify-content: center;
@@ -970,22 +881,23 @@ h6 {
 }
 
 .form__dispatch-input {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 28px; /* 200% */
   padding: 15px 20px;
   width: 40dvw;
   background: #f9f9f9;
   border: 1px solid #e6e6e6;
   border-radius: 5px 0 0 5px;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 28px; /* 200% */
-  letter-spacing: 0.2px;
 }
 
 .button__subscribe {
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
+  color: white;
   letter-spacing: 0.2px;
   line-height: 28px; /* 200% */
   display: flex;
@@ -995,20 +907,35 @@ h6 {
   background-color: rgb(35, 166, 240);
   border: 1px solid #e6e6e6;
   border-radius: 0px 5px 5px 0px;
-  color: white;
 }
 
 .button__subscribe:hover {
   background-color: rgba(35, 166, 240, 0.85);
 }
 
-/* Course review container end*/
-@media (pointer: none), (pointer: coarse) {
-  .cards__carousel {
-    overflow-x: scroll;
+@media screen and (max-width: 1350px) {
+  .header.header.main-header .nav.right-block {
+    display: none;
   }
-  .testimonials__carousel {
-    overflow-x: scroll;
+  .header.header.main-header .button.dropDown-menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container--primary.welcome-block {
+    padding: 0 5%;
+  }
+  .menu.dropDown-menu {
+    right: 5%;
+  }
+  .header.main-header .nav.left-block .nav-links-list {
+    display: none;
+  }
+  .menu.dropDown-menu .nav.left-block {
+    margin: 1rem;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -1027,7 +954,58 @@ h6 {
   }
 }
 
+@media screen and (max-width: 750px) {
+  .cards__carousel {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container--course-review .sideblock.images {
+    height: 320px;
+    max-width: 80lvw;
+  }
+  .sideblock.images .image.rating {
+    top: 0;
+    right: 10%;
+  }
+  .sideblock.images .main-image {
+    width: 250px;
+    height: 250px;
+    background-size: 250px;
+  }
+  .sideblock.images .image.round-graphic {
+    width: 123px;
+    height: 123px;
+    background-size: 123px;
+  }
+}
+
 @media screen and (max-width: 425px) {
+  .container--info .text.headline-text {
+    font-size: 2em;
+    margin: 2rem 0;
+  }
+  .container--info .text.quote .quote-text {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+  .sideblock.images .image.image.rating {
+    top: 0;
+    right: -15px;
+  }
+  .cards .card .text .text-content {
+    min-width: min-content;
+  }
+  .container--page-sections {
+    padding: 0 5%;
+  }
+  .cards__card {
+    flex-basis: 290px;
+  }
+  .cards__carousel {
+    width: 290px;
+  }
   .testimonials__item {
     flex-basis: 290px;
     padding: 0;
@@ -1037,5 +1015,14 @@ h6 {
   }
   .testimonials__carousel {
     max-width: 290px;
+  }
+}
+
+@media (pointer: none), (pointer: coarse) {
+  .cards__carousel {
+    overflow-x: scroll;
+  }
+  .testimonials__carousel {
+    overflow-x: scroll;
   }
 }
