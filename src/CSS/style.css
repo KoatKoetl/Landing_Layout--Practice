@@ -1100,6 +1100,9 @@ ol {
   .testimonials__carousel {
     max-width: 290px;
   }
+  .footer__content {
+    padding: 0 5%;
+  }
 }
 
 @media (pointer: none), (pointer: coarse) {
