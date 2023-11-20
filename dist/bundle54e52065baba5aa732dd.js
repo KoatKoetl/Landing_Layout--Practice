@@ -21,36 +21,35 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var Carousel = /*#__PURE__*/function () {
   function Carousel() {
     _classCallCheck(this, Carousel);
-    this.slider = document.querySelector('.cards__carousel');
     this.isDown = false;
   }
   _createClass(Carousel, [{
     key: "activateCarousel",
-    value: function activateCarousel() {
+    value: function activateCarousel(carouselId) {
       var _this = this;
       var startX;
       var scrollLeft;
-      this.slider.addEventListener('mousedown', function (e) {
+      carouselId.addEventListener('mousedown', function (e) {
         _this.isDown = true;
-        _this.slider.classList.add('cards__card--active');
-        startX = e.pageX - _this.slider.offsetLeft;
-        scrollLeft = _this.slider.scrollLeft;
+        carouselId.classList.add('cards__card--active');
+        startX = e.pageX - carouselId.offsetLeft;
+        scrollLeft = carouselId.scrollLeft;
       });
-      this.slider.addEventListener('mouseleave', function (_) {
+      carouselId.addEventListener('mouseleave', function (_) {
         _this.isDown = false;
-        _this.slider.classList.remove('cards__card--active');
+        carouselId.classList.remove('cards__card--active');
       });
-      this.slider.addEventListener('mouseup', function (_) {
+      carouselId.addEventListener('mouseup', function (_) {
         _this.isDown = false;
-        _this.slider.classList.remove('cards__card--active');
+        carouselId.classList.remove('cards__card--active');
       });
-      this.slider.addEventListener('mousemove', function (e) {
+      carouselId.addEventListener('mousemove', function (e) {
         if (!_this.isDown) return;
         e.preventDefault();
-        var x = e.pageX - _this.slider.offsetLeft;
+        var x = e.pageX - carouselId.offsetLeft;
         var SCROLL_SPEED = 3;
         var walk = (x - startX) * SCROLL_SPEED;
-        _this.slider.scrollLeft = scrollLeft - walk;
+        carouselId.scrollLeft = scrollLeft - walk;
       });
     }
   }]);
@@ -592,6 +591,12 @@ var ___CSS_LOADER_URL_IMPORT_14___ = new URL(/* asset import */ __webpack_requir
 var ___CSS_LOADER_URL_IMPORT_15___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/icon-carbon-chart-area-smooth.svg */ "./src/assets/icon-carbon-chart-area-smooth.svg"), __webpack_require__.b);
 var ___CSS_LOADER_URL_IMPORT_16___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/icon-ant-design-area-chart-outlined.svg */ "./src/assets/icon-ant-design-area-chart-outlined.svg"), __webpack_require__.b);
 var ___CSS_LOADER_URL_IMPORT_17___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/icn-arrow-right.svg */ "./src/assets/icn-arrow-right.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_18___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/testimonial-user-cover-150.png */ "./src/assets/testimonial-user-cover-150.png"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_19___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/icn-bxs-full-star.svg */ "./src/assets/icn-bxs-full-star.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_20___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/icn-empty-star.svg */ "./src/assets/icn-empty-star.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_21___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/ant-design_facebook-filled.svg */ "./src/assets/ant-design_facebook-filled.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_22___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/ant-design_instagram-outlined.svg */ "./src/assets/ant-design_instagram-outlined.svg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_23___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/ant-design_twitter-outlined.svg */ "./src/assets/ant-design_twitter-outlined.svg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_node_modules_normalize_css_normalize_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800&display=swap);"]);
@@ -613,11 +618,18 @@ var ___CSS_LOADER_URL_REPLACEMENT_14___ = _node_modules_css_loader_dist_runtime_
 var ___CSS_LOADER_URL_REPLACEMENT_15___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_15___);
 var ___CSS_LOADER_URL_REPLACEMENT_16___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_16___);
 var ___CSS_LOADER_URL_REPLACEMENT_17___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_17___);
+var ___CSS_LOADER_URL_REPLACEMENT_18___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_18___);
+var ___CSS_LOADER_URL_REPLACEMENT_19___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_19___);
+var ___CSS_LOADER_URL_REPLACEMENT_20___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_20___);
+var ___CSS_LOADER_URL_REPLACEMENT_21___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_21___);
+var ___CSS_LOADER_URL_REPLACEMENT_22___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_22___);
+var ___CSS_LOADER_URL_REPLACEMENT_23___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_23___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `body {
   font-family: 'Montserrat', sans-serif;
   color: white;
   background-color: rgb(37, 43, 66);
+  position: relative;
 }
 
 p,
@@ -627,6 +639,13 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Main container */
@@ -678,8 +697,8 @@ h6 {
 }
 
 .nav.left-block .nav-links-list ul {
-  list-style-type: none;
   display: flex;
+  margin-left: 4rem;
 }
 
 .nav.left-block .nav-links-list li {
@@ -844,32 +863,6 @@ h6 {
   padding: 0.5rem 0;
 }
 
-@media screen and (max-width: 1350px) {
-  .header.header.main-header .nav.right-block {
-    display: none;
-  }
-  .header.header.main-header .button.dropDown-menu {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .container--primary.welcome-block {
-    padding: 0 5%;
-  }
-  .menu.dropDown-menu {
-    right: 5%;
-  }
-  .header.main-header .nav.left-block .nav-links-list {
-    display: none;
-  }
-  .menu.dropDown-menu .nav.left-block {
-    margin: 1rem;
-    width: auto;
-    height: auto;
-  }
-}
-
 /* Main header end */
 
 /* Top container with info start */
@@ -923,17 +916,6 @@ h6 {
 .container--info .button .signIn-button:active {
   background-color: rgb(35, 166, 240);
   transition-duration: 0.1s;
-}
-
-@media screen and (max-width: 425px) {
-  .container--info .text.headline-text {
-    font-size: 2em;
-    margin: 2rem 0;
-  }
-  .container--info .text.quote .quote-text {
-    font-size: 1rem;
-    padding-bottom: 2rem;
-  }
 }
 
 /* Section welcome block end*/
@@ -1040,15 +1022,6 @@ h6 {
 
 .cards .card.card-2 .icon-block .image {
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
-}
-
-@media screen and (max-width: 425px) {
-  .cards .card .text .text-content {
-    min-width: min-content;
-  }
-  .container--page-sections {
-    padding: 0 5%;
-  }
 }
 
 /* Section cards end */
@@ -1163,34 +1136,6 @@ h6 {
   background-size: cover;
 }
 
-@media screen and (max-width: 600px) {
-  .container--course-review .sideblock.images {
-    max-width: 80lvw;
-    height: 320px;
-  }
-  .sideblock.images .image.rating {
-    right: 10%;
-    top: 0;
-  }
-  .sideblock.images .main-image {
-    width: 250px;
-    height: 250px;
-    background-size: 250px;
-  }
-  .sideblock.images .image.round-graphic {
-    width: 123px;
-    height: 123px;
-    background-size: 123px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .sideblock.images .image.image.rating {
-    right: -15px;
-    top: 0;
-  }
-}
-
 .container {
   display: grid;
   grid-gap: 80px;
@@ -1219,19 +1164,20 @@ h6 {
 .main-content__quote {
   font-weight: 400;
   line-height: 20px;
+  max-width: 500px;
+  justify-self: center;
 }
 
 .cards {
-  display: grid;
-  justify-content: center;
+  justify-self: center;
 }
 
 .cards__carousel {
   display: flex;
   gap: 15px;
+  width: 710px;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
-  width: 710px;
 }
 
 .cards__card--active {
@@ -1240,7 +1186,6 @@ h6 {
 
 .cards__card {
   flex: 1 0 330px;
-  scroll-snap-align: start;
   scroll-margin: 5px;
 }
 
@@ -1319,8 +1264,8 @@ h6 {
   display: grid;
   grid-gap: 10px;
   padding: 25px 25px 35px 25px;
-  background-color: white;
   max-width: 330px;
+  background-color: white;
 }
 
 .cards__header-text {
@@ -1453,32 +1398,267 @@ h6 {
 
 .cards__button--small {
   display: flex;
-  padding: 10px 20px;
-  align-items: center;
   gap: 10px;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
   border: 1px solid rgb(35, 166, 240);
   border-radius: 37px;
-  background-color: transparent;
 }
 
 .cards__button-text {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 171.429% */
-  letter-spacing: 0.2px;
   color: rgb(35, 166, 240);
+  letter-spacing: 0.2px;
+  line-height: 24px; /* 171.429% */
 }
 
 .cards__button-icon {
-  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_17___});
-  height: 16px;
   width: 9px;
+  height: 16px;
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_17___});
 }
 
-@media (pointer: none), (pointer: coarse) {
-  .cards__carousel {
-    overflow-x: scroll;
+.testimonials {
+  display: grid;
+  justify-content: center;
+}
+
+.testimonials__carousel {
+  display: flex;
+  gap: 15px;
+  max-width: 50dvw;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.cards__card--active {
+  scroll-snap-type: unset;
+}
+
+.testimonials__item {
+  flex: 1 0 400px;
+  padding: 25px 25px 0 25px;
+  background-color: white;
+  scroll-margin: 5px;
+}
+
+.testimonials__user-cover {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials__user-cover-image {
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_18___});
+}
+
+.testimonials__content {
+  display: grid;
+  grid-gap: 15px;
+  padding: 30px;
+}
+
+.testimonials__text-content {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  max-width: 50%;
+  justify-self: center;
+}
+
+.testimonials__rating {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.testimonials__rating-icon {
+  width: 22px;
+  height: 22px;
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_19___});
+}
+
+.testimonials__rating-icon.cards__rating-icon--empty {
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_20___});
+}
+
+.testimonials__employee-fullName {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  color: #252b42;
+  text-align: center;
+  letter-spacing: 0.1px;
+  line-height: 24px; /* 150% */
+}
+
+.testimonials__employee-position {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  color: #737373;
+  text-align: center;
+  letter-spacing: 0.2px;
+  line-height: 24px; /* 171.429% */
+}
+
+.form__dispatch--email-subscribe {
+  display: flex;
+  justify-content: center;
+}
+
+.form__dispatch-input {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 28px; /* 200% */
+  padding: 15px 20px;
+  width: 40dvw;
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px 0 0 5px;
+}
+
+.button__subscribe {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.2px;
+  line-height: 28px; /* 200% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 22.5px;
+  background-color: rgb(35, 166, 240);
+  border: 1px solid #e6e6e6;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.button__subscribe:hover {
+  background-color: rgba(35, 166, 240, 0.85);
+}
+
+.footer__content {
+  padding: 80px 10%;
+}
+
+.footer__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 30px;
+}
+
+.footer__col {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.footer__col--1 {
+  grid-gap: 25px;
+}
+
+.footer__col-title {
+  grid-column: 1/3;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: 0.1px;
+}
+
+.footer__col-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.2px;
+  grid-column: 1/3;
+}
+
+.footer__links {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.footer__link {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.2px;
+}
+
+.footer__media {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: 20px;
+}
+
+.footer__media-icon {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.footer__media-icon--1 {
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_21___});
+}
+.footer__media-icon--2 {
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_22___});
+}
+.footer__media-icon--3 {
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_23___});
+}
+
+@media screen and (max-width: 1350px) {
+  .header.header.main-header .nav.right-block {
+    display: none;
+  }
+  .header.header.main-header .button.dropDown-menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container--primary.welcome-block {
+    padding: 0 5%;
+  }
+  .menu.dropDown-menu {
+    right: 5%;
+  }
+  .header.main-header .nav.left-block .nav-links-list {
+    display: none;
+  }
+  .menu.dropDown-menu .nav.left-block {
+    margin: 1rem;
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .testimonials__item {
+    flex-basis: fit-content;
+  }
+  .testimonials__carousel {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form__dispatch-input {
+    width: 100%;
   }
 }
 
@@ -1488,20 +1668,76 @@ h6 {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .container--course-review .sideblock.images {
+    height: 320px;
+    max-width: 80lvw;
+  }
+  .sideblock.images .image.rating {
+    top: 0;
+    right: 10%;
+  }
+  .sideblock.images .main-image {
+    width: 250px;
+    height: 250px;
+    background-size: 250px;
+  }
+  .sideblock.images .image.round-graphic {
+    width: 123px;
+    height: 123px;
+    background-size: 123px;
+  }
+}
+
 @media screen and (max-width: 425px) {
+  .container--info .text.headline-text {
+    font-size: 2em;
+    margin: 2rem 0;
+  }
+  .container--info .text.quote .quote-text {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+  .sideblock.images .image.image.rating {
+    top: 0;
+    right: -15px;
+  }
+  .cards .card .text .text-content {
+    min-width: min-content;
+  }
+  .container--page-sections {
+    padding: 0 5%;
+  }
   .cards__card {
     flex-basis: 290px;
   }
   .cards__carousel {
     width: 290px;
   }
+  .testimonials__item {
+    flex-basis: 290px;
+    padding: 0;
+  }
+  .testimonials__content {
+    padding: 30px 0;
+  }
+  .testimonials__carousel {
+    max-width: 290px;
+  }
+  .footer__content {
+    padding: 0 5%;
+  }
 }
 
-.testimonials__user-cover {
+@media (pointer: none), (pointer: coarse) {
+  .cards__carousel {
+    overflow-x: scroll;
+  }
+  .testimonials__carousel {
+    overflow-x: scroll;
+  }
 }
-
-/* Course review container end*/
-`, "",{"version":3,"sources":["webpack://./src/CSS/style.css"],"names":[],"mappings":"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","sourcesContent":["@import '~normalize.css/normalize.css';\n@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800&display=swap');\n\nbody {\n  font-family: 'Montserrat', sans-serif;\n  color: white;\n  background-color: rgb(37, 43, 66);\n}\n\np,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0;\n}\n\n/* Main container */\n.container--primary {\n  position: relative;\n}\n\n/* Main container background image */\n.background.image {\n  display: block;\n  position: absolute;\n  z-index: 0;\n  top: 0;\n  right: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-image: url(../assets/home-background.svg);\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n/* Section welcome block start*/\n\n.container--primary.welcome-block {\n  position: relative;\n  z-index: 1;\n  padding: 0 10%;\n  background: linear-gradient(90deg, #000 0.13%, #000 0.14%, rgba(0, 0, 0, 0) 99.56%);\n  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);\n}\n\n.header.main-header {\n  font-weight: 800;\n  color: white;\n  display: flex;\n  justify-content: space-between;\n  padding: 2rem 0;\n}\n\n.header.main-header .nav.left-block {\n  display: flex;\n  align-items: center;\n}\n\n.nav.left-block .brand-name {\n  font-size: 2rem;\n  padding: 1rem 0;\n}\n\n.nav.left-block .nav-links-list ul {\n  list-style-type: none;\n  display: flex;\n}\n\n.nav.left-block .nav-links-list li {\n  margin-left: 1rem;\n}\n\n.nav.left-block .nav-links-list a {\n  color: white;\n  text-decoration: none;\n  padding: 1rem;\n}\n\n.nav.left-block .nav-links-list a:hover {\n  color: rgb(35, 166, 240);\n  text-decoration: underline;\n  text-underline-offset: 0.5rem;\n}\n\n.nav.left-block .nav-links-list a:active {\n  color: rgba(255, 255, 255, 0.75);\n}\n\n.header.main-header .nav.right-block {\n  display: flex;\n  align-items: center;\n}\n\n.nav.button-login a {\n  font-weight: 800;\n  color: white;\n  text-decoration: none;\n  padding: 1rem;\n  border: none;\n}\n\n.nav.right-block .nav.button-login a:hover {\n  color: rgb(35, 166, 240);\n  text-decoration: underline;\n  text-underline-offset: 0.5rem;\n}\n\n.nav.right-block .nav.button-login a:active {\n  color: rgba(255, 255, 255, 0.75);\n}\n\n.nav.button-signIn button {\n  font-size: 1rem;\n  font-weight: 800;\n  color: white;\n  display: flex;\n  align-items: center;\n  margin-left: 2rem;\n  padding: 1.2rem 1.5rem;\n  min-width: max-content;\n  background-color: rgb(35, 166, 240);\n  border: 2px solid rgb(35, 166, 240);\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n\n.nav.right-block .nav.button-signIn button:hover {\n  background-color: transparent;\n  transition-duration: 0.5s;\n}\n\n.nav.right-block .nav.button-signIn button:active {\n  background-color: rgb(35, 166, 240);\n  transition-duration: 0.1s;\n}\n\n.button.dropDown-menu {\n  display: none;\n  align-items: center;\n}\n\n.button.dropDown-menu .icon.burger-icon {\n  font-size: 1.5rem;\n  padding: 0.5rem;\n  cursor: pointer;\n}\n\n.button.dropDown-menu .icon.burger-icon:hover {\n  transform: scale(1.2);\n  transition: 0.5s;\n}\n\n.button.dropDown-menu .icon.burger-icon:active {\n  transform: scale(1);\n  transition: 0.3s;\n}\n\n.menu.dropDown-menu {\n  display: flex;\n  visibility: hidden;\n  position: absolute;\n  z-index: 2;\n  gap: 1rem;\n  right: 10%;\n  padding: 0.3rem;\n  background-color: rgba(35, 166, 240, 0.95);\n  border-radius: 0.3rem;\n  opacity: 0;\n  transition: opacity 0.3s, visibility 0.5s;\n}\n\n.menu.dropDown-menu .nav.left-block {\n  visibility: hidden;\n  width: 0;\n  height: 0;\n  opacity: 0;\n  transition: opacity 1s;\n}\n\n.menu.dropDown-menu .nav.right-block {\n  visibility: hidden;\n  margin: 1rem;\n  opacity: 0;\n  transition: opacity 1s, visibility 0.5s;\n}\n\n.menu.dropDown-menu .button.close {\n  color: white;\n  text-align: right;\n  position: relative;\n  padding-top: 0.3rem;\n}\n\n.button.close .icon.close-icon {\n  font-size: 1.2rem;\n  position: absolute;\n  right: 0;\n  padding: 0.3rem;\n  cursor: pointer;\n}\n\n.button.close .icon.close-icon:hover {\n  transform: scale(0.9);\n}\n\n.button.close .icon.close-icon:active {\n  transform: scale(1);\n}\n\n.menu.dropDown-menu a {\n  font-size: 1.2rem;\n  font-weight: 800;\n  color: white;\n  text-decoration: none;\n}\n\n.menu.dropDown-menu a:hover {\n  text-decoration: underline;\n  text-underline-offset: 0.5rem;\n}\n\n.menu.dropDown-menu ul {\n  list-style-type: none;\n  padding: 0;\n}\n\n.menu.dropDown-menu li {\n  padding: 0.5rem 0;\n}\n\n@media screen and (max-width: 1350px) {\n  .header.header.main-header .nav.right-block {\n    display: none;\n  }\n  .header.header.main-header .button.dropDown-menu {\n    display: flex;\n  }\n}\n\n@media screen and (max-width: 960px) {\n  .container--primary.welcome-block {\n    padding: 0 5%;\n  }\n  .menu.dropDown-menu {\n    right: 5%;\n  }\n  .header.main-header .nav.left-block .nav-links-list {\n    display: none;\n  }\n  .menu.dropDown-menu .nav.left-block {\n    margin: 1rem;\n    width: auto;\n    height: auto;\n  }\n}\n\n/* Main header end */\n\n/* Top container with info start */\n.container--info {\n  padding: 7% 0;\n}\n\n.container--info .text.greeting .greeting-message {\n  font-weight: 700;\n  color: rgb(35, 166, 240);\n}\n\n.container--info .text.headline-text {\n  font-size: 4rem;\n  font-weight: 700;\n  line-height: 1.5em;\n  margin: 3rem 0;\n  max-width: 70dvh;\n}\n\n.container--info .text.quote {\n  line-height: 2em;\n  padding-bottom: 3rem;\n  max-width: 70dvh;\n}\n\n.container--info .text.quote .quote-text {\n  font-size: 1.5rem;\n  font-weight: 300;\n}\n\n.container--info .button .signIn-button {\n  font-size: 1rem;\n  font-weight: 700;\n  color: white;\n  display: flex;\n  align-items: center;\n  padding: 1.2rem 1.5rem;\n  min-width: max-content;\n  background-color: rgb(35, 166, 240);\n  border: 2px solid rgb(35, 166, 240);\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n\n.container--info .button .signIn-button:hover {\n  background-color: transparent;\n  transition-duration: 0.5s;\n}\n\n.container--info .button .signIn-button:active {\n  background-color: rgb(35, 166, 240);\n  transition-duration: 0.1s;\n}\n\n@media screen and (max-width: 425px) {\n  .container--info .text.headline-text {\n    font-size: 2em;\n    margin: 2rem 0;\n  }\n  .container--info .text.quote .quote-text {\n    font-size: 1rem;\n    padding-bottom: 2rem;\n  }\n}\n\n/* Section welcome block end*/\n\n/* Section cards start */\n\n.container--page-sections {\n  padding: 0 10%;\n}\n\n.container__cards {\n  display: flex;\n  flex-direction: column;\n  gap: 5rem;\n  align-items: center;\n  padding: 10% 0;\n}\n\n.container__cards .main-content .text {\n  text-align: center;\n}\n\n.container__cards .main-content .text .text-content {\n  font-weight: 700;\n  color: rgb(35, 166, 240);\n  letter-spacing: 0.2px;\n}\n\n.container__cards .main-content .text .title {\n  font-size: 3rem;\n  font-weight: 700;\n  letter-spacing: 0.2px;\n  margin: 0;\n  padding: 1rem 0;\n}\n\n.container__cards .main-content .text .quote:first-child {\n  font-size: 1rem;\n  font-weight: 600;\n  letter-spacing: 0.2px;\n  line-height: 1.5rem;\n}\n\n.container__cards .cards {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 2rem;\n  justify-content: center;\n  align-items: center;\n}\n\n.cards .card {\n  color: black;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  gap: 1.5rem;\n  align-items: center;\n  padding: 2.2rem 2.5rem;\n  background-color: white;\n  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);\n}\n\n.cards .card .text {\n  display: flex;\n  justify-content: center;\n}\n\n.cards .card .text .title {\n  font-weight: 700;\n  color: #252b42;\n}\n\n.cards .card .element.divide-line {\n  min-width: 3.2rem;\n  border: 1px solid #e74040;\n}\n\n.cards .card .text .text-content {\n  font-weight: 400;\n  color: #737373;\n  max-width: 50%;\n}\n\n.cards .card .icon-block {\n  display: flex;\n  justify-content: center;\n}\n\n.cards .card .icon-block .background {\n  padding: 1.4rem 1.2rem;\n  background-color: #e74040;\n  border-radius: 0.6rem;\n}\n\n.cards .card .icon-block .image {\n  width: 2rem;\n  height: 2rem;\n}\n\n.cards .card.card-1 .icon-block .image {\n  background-image: url(../assets/icon-heart.svg);\n}\n\n.cards .card.card-2 .icon-block .image {\n  background-image: url(../assets/icon-flag.svg);\n}\n\n@media screen and (max-width: 425px) {\n  .cards .card .text .text-content {\n    min-width: min-content;\n  }\n  .container--page-sections {\n    padding: 0 5%;\n  }\n}\n\n/* Section cards end */\n\n/* Course review container start */\n\n.container--page-sections .container--course-review {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 2rem;\n  justify-content: center;\n  align-items: center;\n  padding: 10% 0;\n}\n\n.container--course-review .sideblock.main-content {\n  display: flex;\n  flex-direction: column;\n  gap: 2.2rem;\n  width: max-content;\n}\n\n.sideblock.main-content .element.divide-line {\n  height: 7px;\n  max-width: 6rem;\n  background-color: #e74040;\n}\n\n.sideblock.main-content .text .title {\n  font-size: 2.5rem;\n  font-weight: 700;\n  letter-spacing: 0.2px;\n  margin: 0;\n}\n\n.sideblock.main-content .text .quote-text {\n  font-size: 1rem;\n  font-weight: 400;\n  letter-spacing: 0.2px;\n  line-height: 1.3rem;\n}\n\n.sideblock.main-content .link {\n  display: flex;\n}\n\n.sideblock.main-content .link a {\n  font-weight: 700;\n  color: rgb(35, 166, 240);\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n}\n\n.sideblock.main-content .link a:hover {\n  text-decoration: underline;\n  text-underline-offset: 0.5rem;\n}\n\n.sideblock.main-content .link a:active {\n  color: rgba(255, 255, 255, 0.75);\n}\n\n.sideblock.main-content .link .icon {\n  font-size: 1.5rem;\n}\n\n.container--course-review .sideblock.images {\n  position: relative;\n  width: 401px;\n  height: 507px;\n}\n\n.sideblock.images .main-image {\n  position: absolute;\n  z-index: 0;\n  top: 0;\n  left: 0;\n  width: 408px;\n  height: 408px;\n  background-image: url(../assets/man-in-glasses.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 0 83px;\n  box-shadow: #00087e 30px 22px;\n}\n\n.sideblock.images .image.round-graphic {\n  position: absolute;\n  z-index: 1;\n  bottom: 0;\n  left: 76px;\n  width: 247px;\n  height: 247px;\n  background-image: url(../assets/round-graphics.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.sideblock.images .image.rating {\n  position: absolute;\n  z-index: 2;\n  top: 50px;\n  right: 0px;\n  width: 115px;\n  height: 58px;\n  background-image: url(../assets/rating.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n@media screen and (max-width: 600px) {\n  .container--course-review .sideblock.images {\n    max-width: 80lvw;\n    height: 320px;\n  }\n  .sideblock.images .image.rating {\n    right: 10%;\n    top: 0;\n  }\n  .sideblock.images .main-image {\n    width: 250px;\n    height: 250px;\n    background-size: 250px;\n  }\n  .sideblock.images .image.round-graphic {\n    width: 123px;\n    height: 123px;\n    background-size: 123px;\n  }\n}\n\n@media screen and (max-width: 425px) {\n  .sideblock.images .image.image.rating {\n    right: -15px;\n    top: 0;\n  }\n}\n\n.container {\n  display: grid;\n  grid-gap: 80px;\n  justify-content: center;\n  padding: 160px 0;\n}\n\n.main-content {\n  font-weight: 700;\n  text-align: center;\n  letter-spacing: 0.2px;\n  display: grid;\n  grid-gap: 10px;\n}\n\n.main-content__section-tag {\n  color: rgb(35, 166, 240);\n  line-height: 24px;\n}\n\n.main-content__title {\n  font-size: 40px;\n  line-height: 50px;\n}\n\n.main-content__quote {\n  font-weight: 400;\n  line-height: 20px;\n}\n\n.cards {\n  display: grid;\n  justify-content: center;\n}\n\n.cards__carousel {\n  display: flex;\n  gap: 15px;\n  overflow-x: hidden;\n  scroll-snap-type: x mandatory;\n  width: 710px;\n}\n\n.cards__card--active {\n  scroll-snap-type: unset;\n}\n\n.cards__card {\n  flex: 1 0 330px;\n  scroll-snap-align: start;\n  scroll-margin: 5px;\n}\n\n.cards__product-image {\n  position: relative;\n  height: 300px;\n  max-width: 330px;\n  background-color: lightgray;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n\n.cards__product-image-1 {\n  background-image: url(../assets/product-cover\\(first-card\\).png);\n}\n\n.cards__product-image-2 {\n  background-image: url(../assets/product-cover-176.png);\n}\n\n.cards__product-image-3 {\n  background-image: url(../assets/product-cover-175.png);\n}\n\n.cards__tag {\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: 0.2px;\n  line-height: 24px;\n  display: inline-flex;\n  margin: 20px;\n  padding: 0 10px;\n  background-color: #e74040;\n  border-radius: 3px;\n  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);\n}\n\n.cards__product-actions {\n  display: inline-flex;\n  position: absolute;\n  gap: 10px;\n  right: 27%;\n  bottom: 24px;\n  left: 27%;\n}\n\n.cards__action {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 40px;\n  height: 40px;\n  background-color: white;\n  border-radius: 44.786px;\n}\n\n.cards__icon {\n  width: 20px;\n  height: 20px;\n}\n\n.cards__icon--favorite {\n  background-image: url(../assets/icn-favorite.svg);\n}\n\n.cards__icon--basket {\n  background-image: url(../assets/icn-basket.svg);\n}\n\n.cards__icon--view {\n  background-image: url(../assets/icn-view.svg);\n}\n\n.cards__description {\n  color: #000;\n  display: grid;\n  grid-gap: 10px;\n  padding: 25px 25px 35px 25px;\n  background-color: white;\n  max-width: 330px;\n}\n\n.cards__header-text {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.cards__link {\n  font-size: 14px;\n  font-weight: 700;\n  color: rgb(35, 166, 240);\n  text-decoration: none;\n  letter-spacing: 0.2px;\n  line-height: 24px;\n}\n\n.cards__rating {\n  color: white;\n  display: flex;\n  gap: 5px;\n  padding: 5px;\n  background-color: #252b42;\n  border-radius: 20px;\n}\n\n.cards__rating-icon {\n  width: 16px;\n  height: 16px;\n  background-image: url(../assets/icon-emojione-star.svg);\n}\n\n.cards__rating-number {\n  font-size: 12px;\n  font-weight: 600;\n  letter-spacing: 0.2px;\n  line-height: 16px;\n}\n\n.cards__title {\n  font-size: 16px;\n  font-weight: 700;\n  color: #252b42;\n  letter-spacing: 0.1px;\n  line-height: 24px;\n}\n\n.cards__text-content {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 600;\n  color: #737373;\n  letter-spacing: 0.2px;\n  line-height: 20px; /* 142.857% */\n}\n\n.cards__sales {\n  color: #737373;\n  display: flex;\n  gap: 10px;\n  align-items: center;\n}\n\n.cards__sales-number {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 700;\n  letter-spacing: 0.2px;\n  line-height: 24px;\n}\n\n.cards__sales-image {\n  width: 16px;\n  height: 16px;\n  background-image: url(../assets/icon-sales.svg);\n}\n\n.cards__price {\n  font-weight: 700;\n  letter-spacing: 0.1px;\n  line-height: 24px;\n  display: flex;\n  gap: 10px;\n}\n\n.cards__price--color-gray {\n  font-size: 16px;\n  color: #bdbdbd;\n}\n\n.cards__price--color-green {\n  font-size: 16px;\n  color: #40bb15;\n}\n\n.cards__short-overview {\n  font-size: 12px;\n  font-style: normal;\n  font-weight: 400;\n  color: #737373;\n  letter-spacing: 0.2px;\n  line-height: 16px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 15px 0;\n}\n\n.cards__short-overview-block {\n  display: flex;\n  gap: 5px;\n}\n\n.cards__short-overview-icon {\n  width: 16px;\n  height: 16px;\n}\n\n.cards__short-overview-icon--clock {\n  background-image: url(../assets/icon-clock.svg);\n}\n\n.cards__short-overview-icon--chart {\n  background-image: url(../assets/icon-carbon-chart-area-smooth.svg);\n}\n\n.cards__short-overview-icon--graph {\n  background-image: url(../assets/icon-ant-design-area-chart-outlined.svg);\n}\n\n.cards__button--small {\n  display: flex;\n  padding: 10px 20px;\n  align-items: center;\n  gap: 10px;\n  border: 1px solid rgb(35, 166, 240);\n  border-radius: 37px;\n  background-color: transparent;\n}\n\n.cards__button-text {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 700;\n  line-height: 24px; /* 171.429% */\n  letter-spacing: 0.2px;\n  color: rgb(35, 166, 240);\n}\n\n.cards__button-icon {\n  background-image: url(../assets/icn-arrow-right.svg);\n  height: 16px;\n  width: 9px;\n}\n\n@media (pointer: none), (pointer: coarse) {\n  .cards__carousel {\n    overflow-x: scroll;\n  }\n}\n\n@media screen and (max-width: 750px) {\n  .cards__carousel {\n    width: 400px;\n  }\n}\n\n@media screen and (max-width: 425px) {\n  .cards__card {\n    flex-basis: 290px;\n  }\n  .cards__carousel {\n    width: 290px;\n  }\n}\n\n.testimonials__user-cover {\n}\n\n/* Course review container end*/\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/CSS/style.css"],"names":[],"mappings":"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Cf,kBAAkB;EAClB,gBAAgB;EAChB,qBAAqB;EACrB,iBAAiB,EAAE,SAAS;EAC5B,kBAAkB;EAClB,YAAY;EACZ,mBAAmB;EACnB,yBAAyB;EACzB,0BAA0B;AAC5B;;AAEA;EACE,eAAe;EACf,kBAAkB;EAClB,gBAAgB;EAChB,YAAY;EACZ,qBAAqB;EACrB,iBAAiB,EAAE,SAAS;EAC5B,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,oBAAoB;EACpB,mCAAmC;EACnC,yBAAyB;EACzB,8BAA8B;AAChC;;AAEA;EACE,0CAA0C;AAC5C;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,2DAA2D;EAC3D,oBAAoB;EACpB,cAAc;AAChB;;AAEA;EACE,aAAa;EACb,cAAc;EACd,8BAA8B;AAChC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;EAChB,eAAe;EACf,kBAAkB;EAClB,gBAAgB;EAChB,iBAAiB,EAAE,aAAa;EAChC,qBAAqB;AACvB;;AAEA;EACE,eAAe;EACf,kBAAkB;EAClB,gBAAgB;EAChB,iBAAiB,EAAE,aAAa;EAChC,qBAAqB;EACrB,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,cAAc;AAChB;;AAEA;EACE,eAAe;EACf,kBAAkB;EAClB,gBAAgB;EAChB,iBAAiB,EAAE,aAAa;EAChC,qBAAqB;AACvB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,sBAAsB;EACtB,cAAc;AAChB;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,4BAA4B;EAC5B,2BAA2B;EAC3B,sBAAsB;AACxB;AACA;EACE,0DAA+D;AACjE;AACA;EACE,0DAAkE;AACpE;AACA;EACE,0DAAgE;AAClE;;AAEA;EACE;IACE,aAAa;EACf;EACA;IACE,aAAa;EACf;AACF;;AAEA;EACE;IACE,aAAa;EACf;EACA;IACE,SAAS;EACX;EACA;IACE,aAAa;EACf;EACA;IACE,YAAY;IACZ,WAAW;IACX,YAAY;EACd;AACF;;AAEA;EACE;IACE,uBAAuB;EACzB;EACA;IACE,gBAAgB;EAClB;AACF;;AAEA;EACE;IACE,WAAW;EACb;AACF;;AAEA;EACE;IACE,YAAY;EACd;AACF;;AAEA;EACE;IACE,aAAa;IACb,gBAAgB;EAClB;EACA;IACE,MAAM;IACN,UAAU;EACZ;EACA;IACE,YAAY;IACZ,aAAa;IACb,sBAAsB;EACxB;EACA;IACE,YAAY;IACZ,aAAa;IACb,sBAAsB;EACxB;AACF;;AAEA;EACE;IACE,cAAc;IACd,cAAc;EAChB;EACA;IACE,eAAe;IACf,oBAAoB;EACtB;EACA;IACE,MAAM;IACN,YAAY;EACd;EACA;IACE,sBAAsB;EACxB;EACA;IACE,aAAa;EACf;EACA;IACE,iBAAiB;EACnB;EACA;IACE,YAAY;EACd;EACA;IACE,iBAAiB;IACjB,UAAU;EACZ;EACA;IACE,eAAe;EACjB;EACA;IACE,gBAAgB;EAClB;EACA;IACE,aAAa;EACf;AACF;;AAEA;EACE;IACE,kBAAkB;EACpB;EACA;IACE,kBAAkB;EACpB;AACF","sourcesContent":["@import '~normalize.css/normalize.css';\n@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800&display=swap');\n\nbody {\n  font-family: 'Montserrat', sans-serif;\n  color: white;\n  background-color: rgb(37, 43, 66);\n  position: relative;\n}\n\np,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0;\n}\n\nul,\nol {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n}\n\n/* Main container */\n.container--primary {\n  position: relative;\n}\n\n/* Main container background image */\n.background.image {\n  display: block;\n  position: absolute;\n  z-index: 0;\n  top: 0;\n  right: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-image: url(../assets/home-background.svg);\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n/* Section welcome block start*/\n\n.container--primary.welcome-block {\n  position: relative;\n  z-index: 1;\n  padding: 0 10%;\n  background: linear-gradient(90deg, #000 0.13%, #000 0.14%, rgba(0, 0, 0, 0) 99.56%);\n  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);\n}\n\n.header.main-header {\n  font-weight: 800;\n  color: white;\n  display: flex;\n  justify-content: space-between;\n  padding: 2rem 0;\n}\n\n.header.main-header .nav.left-block {\n  display: flex;\n  align-items: center;\n}\n\n.nav.left-block .brand-name {\n  font-size: 2rem;\n  padding: 1rem 0;\n}\n\n.nav.left-block .nav-links-list ul {\n  display: flex;\n  margin-left: 4rem;\n}\n\n.nav.left-block .nav-links-list li {\n  margin-left: 1rem;\n}\n\n.nav.left-block .nav-links-list a {\n  color: white;\n  text-decoration: none;\n  padding: 1rem;\n}\n\n.nav.left-block .nav-links-list a:hover {\n  color: rgb(35, 166, 240);\n  text-decoration: underline;\n  text-underline-offset: 0.5rem;\n}\n\n.nav.left-block .nav-links-list a:active {\n  color: rgba(255, 255, 255, 0.75);\n}\n\n.header.main-header .nav.right-block {\n  display: flex;\n  align-items: center;\n}\n\n.nav.button-login a {\n  font-weight: 800;\n  color: white;\n  text-decoration: none;\n  padding: 1rem;\n  border: none;\n}\n\n.nav.right-block .nav.button-login a:hover {\n  color: rgb(35, 166, 240);\n  text-decoration: underline;\n  text-underline-offset: 0.5rem;\n}\n\n.nav.right-block .nav.button-login a:active {\n  color: rgba(255, 255, 255, 0.75);\n}\n\n.nav.button-signIn button {\n  font-size: 1rem;\n  font-weight: 800;\n  color: white;\n  display: flex;\n  align-items: center;\n  margin-left: 2rem;\n  padding: 1.2rem 1.5rem;\n  min-width: max-content;\n  background-color: rgb(35, 166, 240);\n  border: 2px solid rgb(35, 166, 240);\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n\n.nav.right-block .nav.button-signIn button:hover {\n  background-color: transparent;\n  transition-duration: 0.5s;\n}\n\n.nav.right-block .nav.button-signIn button:active {\n  background-color: rgb(35, 166, 240);\n  transition-duration: 0.1s;\n}\n\n.button.dropDown-menu {\n  display: none;\n  align-items: center;\n}\n\n.button.dropDown-menu .icon.burger-icon {\n  font-size: 1.5rem;\n  padding: 0.5rem;\n  cursor: pointer;\n}\n\n.button.dropDown-menu .icon.burger-icon:hover {\n  transform: scale(1.2);\n  transition: 0.5s;\n}\n\n.button.dropDown-menu .icon.burger-icon:active {\n  transform: scale(1);\n  transition: 0.3s;\n}\n\n.menu.dropDown-menu {\n  display: flex;\n  visibility: hidden;\n  position: absolute;\n  z-index: 2;\n  gap: 1rem;\n  right: 10%;\n  padding: 0.3rem;\n  background-color: rgba(35, 166, 240, 0.95);\n  border-radius: 0.3rem;\n  opacity: 0;\n  transition: opacity 0.3s, visibility 0.5s;\n}\n\n.menu.dropDown-menu .nav.left-block {\n  visibility: hidden;\n  width: 0;\n  height: 0;\n  opacity: 0;\n  transition: opacity 1s;\n}\n\n.menu.dropDown-menu .nav.right-block {\n  visibility: hidden;\n  margin: 1rem;\n  opacity: 0;\n  transition: opacity 1s, visibility 0.5s;\n}\n\n.menu.dropDown-menu .button.close {\n  color: white;\n  text-align: right;\n  position: relative;\n  padding-top: 0.3rem;\n}\n\n.button.close .icon.close-icon {\n  font-size: 1.2rem;\n  position: absolute;\n  right: 0;\n  padding: 0.3rem;\n  cursor: pointer;\n}\n\n.button.close .icon.close-icon:hover {\n  transform: scale(0.9);\n}\n\n.button.close .icon.close-icon:active {\n  transform: scale(1);\n}\n\n.menu.dropDown-menu a {\n  font-size: 1.2rem;\n  font-weight: 800;\n  color: white;\n  text-decoration: none;\n}\n\n.menu.dropDown-menu a:hover {\n  text-decoration: underline;\n  text-underline-offset: 0.5rem;\n}\n\n.menu.dropDown-menu ul {\n  list-style-type: none;\n  padding: 0;\n}\n\n.menu.dropDown-menu li {\n  padding: 0.5rem 0;\n}\n\n/* Main header end */\n\n/* Top container with info start */\n.container--info {\n  padding: 7% 0;\n}\n\n.container--info .text.greeting .greeting-message {\n  font-weight: 700;\n  color: rgb(35, 166, 240);\n}\n\n.container--info .text.headline-text {\n  font-size: 4rem;\n  font-weight: 700;\n  line-height: 1.5em;\n  margin: 3rem 0;\n  max-width: 70dvh;\n}\n\n.container--info .text.quote {\n  line-height: 2em;\n  padding-bottom: 3rem;\n  max-width: 70dvh;\n}\n\n.container--info .text.quote .quote-text {\n  font-size: 1.5rem;\n  font-weight: 300;\n}\n\n.container--info .button .signIn-button {\n  font-size: 1rem;\n  font-weight: 700;\n  color: white;\n  display: flex;\n  align-items: center;\n  padding: 1.2rem 1.5rem;\n  min-width: max-content;\n  background-color: rgb(35, 166, 240);\n  border: 2px solid rgb(35, 166, 240);\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n\n.container--info .button .signIn-button:hover {\n  background-color: transparent;\n  transition-duration: 0.5s;\n}\n\n.container--info .button .signIn-button:active {\n  background-color: rgb(35, 166, 240);\n  transition-duration: 0.1s;\n}\n\n/* Section welcome block end*/\n\n/* Section cards start */\n\n.container--page-sections {\n  padding: 0 10%;\n}\n\n.container__cards {\n  display: flex;\n  flex-direction: column;\n  gap: 5rem;\n  align-items: center;\n  padding: 10% 0;\n}\n\n.container__cards .main-content .text {\n  text-align: center;\n}\n\n.container__cards .main-content .text .text-content {\n  font-weight: 700;\n  color: rgb(35, 166, 240);\n  letter-spacing: 0.2px;\n}\n\n.container__cards .main-content .text .title {\n  font-size: 3rem;\n  font-weight: 700;\n  letter-spacing: 0.2px;\n  margin: 0;\n  padding: 1rem 0;\n}\n\n.container__cards .main-content .text .quote:first-child {\n  font-size: 1rem;\n  font-weight: 600;\n  letter-spacing: 0.2px;\n  line-height: 1.5rem;\n}\n\n.container__cards .cards {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 2rem;\n  justify-content: center;\n  align-items: center;\n}\n\n.cards .card {\n  color: black;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  gap: 1.5rem;\n  align-items: center;\n  padding: 2.2rem 2.5rem;\n  background-color: white;\n  box-shadow: 0px 13px 19px 0px rgba(0, 0, 0, 0.07);\n}\n\n.cards .card .text {\n  display: flex;\n  justify-content: center;\n}\n\n.cards .card .text .title {\n  font-weight: 700;\n  color: #252b42;\n}\n\n.cards .card .element.divide-line {\n  min-width: 3.2rem;\n  border: 1px solid #e74040;\n}\n\n.cards .card .text .text-content {\n  font-weight: 400;\n  color: #737373;\n  max-width: 50%;\n}\n\n.cards .card .icon-block {\n  display: flex;\n  justify-content: center;\n}\n\n.cards .card .icon-block .background {\n  padding: 1.4rem 1.2rem;\n  background-color: #e74040;\n  border-radius: 0.6rem;\n}\n\n.cards .card .icon-block .image {\n  width: 2rem;\n  height: 2rem;\n}\n\n.cards .card.card-1 .icon-block .image {\n  background-image: url(../assets/icon-heart.svg);\n}\n\n.cards .card.card-2 .icon-block .image {\n  background-image: url(../assets/icon-flag.svg);\n}\n\n/* Section cards end */\n\n/* Course review container start */\n\n.container--page-sections .container--course-review {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 2rem;\n  justify-content: center;\n  align-items: center;\n  padding: 10% 0;\n}\n\n.container--course-review .sideblock.main-content {\n  display: flex;\n  flex-direction: column;\n  gap: 2.2rem;\n  width: max-content;\n}\n\n.sideblock.main-content .element.divide-line {\n  height: 7px;\n  max-width: 6rem;\n  background-color: #e74040;\n}\n\n.sideblock.main-content .text .title {\n  font-size: 2.5rem;\n  font-weight: 700;\n  letter-spacing: 0.2px;\n  margin: 0;\n}\n\n.sideblock.main-content .text .quote-text {\n  font-size: 1rem;\n  font-weight: 400;\n  letter-spacing: 0.2px;\n  line-height: 1.3rem;\n}\n\n.sideblock.main-content .link {\n  display: flex;\n}\n\n.sideblock.main-content .link a {\n  font-weight: 700;\n  color: rgb(35, 166, 240);\n  text-decoration: none;\n  display: flex;\n  align-items: center;\n}\n\n.sideblock.main-content .link a:hover {\n  text-decoration: underline;\n  text-underline-offset: 0.5rem;\n}\n\n.sideblock.main-content .link a:active {\n  color: rgba(255, 255, 255, 0.75);\n}\n\n.sideblock.main-content .link .icon {\n  font-size: 1.5rem;\n}\n\n.container--course-review .sideblock.images {\n  position: relative;\n  width: 401px;\n  height: 507px;\n}\n\n.sideblock.images .main-image {\n  position: absolute;\n  z-index: 0;\n  top: 0;\n  left: 0;\n  width: 408px;\n  height: 408px;\n  background-image: url(../assets/man-in-glasses.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  border-radius: 0 83px;\n  box-shadow: #00087e 30px 22px;\n}\n\n.sideblock.images .image.round-graphic {\n  position: absolute;\n  z-index: 1;\n  bottom: 0;\n  left: 76px;\n  width: 247px;\n  height: 247px;\n  background-image: url(../assets/round-graphics.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.sideblock.images .image.rating {\n  position: absolute;\n  z-index: 2;\n  top: 50px;\n  right: 0px;\n  width: 115px;\n  height: 58px;\n  background-image: url(../assets/rating.svg);\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.container {\n  display: grid;\n  grid-gap: 80px;\n  justify-content: center;\n  padding: 160px 0;\n}\n\n.main-content {\n  font-weight: 700;\n  text-align: center;\n  letter-spacing: 0.2px;\n  display: grid;\n  grid-gap: 10px;\n}\n\n.main-content__section-tag {\n  color: rgb(35, 166, 240);\n  line-height: 24px;\n}\n\n.main-content__title {\n  font-size: 40px;\n  line-height: 50px;\n}\n\n.main-content__quote {\n  font-weight: 400;\n  line-height: 20px;\n  max-width: 500px;\n  justify-self: center;\n}\n\n.cards {\n  justify-self: center;\n}\n\n.cards__carousel {\n  display: flex;\n  gap: 15px;\n  width: 710px;\n  overflow-x: hidden;\n  scroll-snap-type: x mandatory;\n}\n\n.cards__card--active {\n  scroll-snap-type: unset;\n}\n\n.cards__card {\n  flex: 1 0 330px;\n  scroll-margin: 5px;\n}\n\n.cards__product-image {\n  position: relative;\n  height: 300px;\n  max-width: 330px;\n  background-color: lightgray;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n\n.cards__product-image-1 {\n  background-image: url(../assets/product-cover\\(first-card\\).png);\n}\n\n.cards__product-image-2 {\n  background-image: url(../assets/product-cover-176.png);\n}\n\n.cards__product-image-3 {\n  background-image: url(../assets/product-cover-175.png);\n}\n\n.cards__tag {\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: 0.2px;\n  line-height: 24px;\n  display: inline-flex;\n  margin: 20px;\n  padding: 0 10px;\n  background-color: #e74040;\n  border-radius: 3px;\n  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);\n}\n\n.cards__product-actions {\n  display: inline-flex;\n  position: absolute;\n  gap: 10px;\n  right: 27%;\n  bottom: 24px;\n  left: 27%;\n}\n\n.cards__action {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 40px;\n  height: 40px;\n  background-color: white;\n  border-radius: 44.786px;\n}\n\n.cards__icon {\n  width: 20px;\n  height: 20px;\n}\n\n.cards__icon--favorite {\n  background-image: url(../assets/icn-favorite.svg);\n}\n\n.cards__icon--basket {\n  background-image: url(../assets/icn-basket.svg);\n}\n\n.cards__icon--view {\n  background-image: url(../assets/icn-view.svg);\n}\n\n.cards__description {\n  color: #000;\n  display: grid;\n  grid-gap: 10px;\n  padding: 25px 25px 35px 25px;\n  max-width: 330px;\n  background-color: white;\n}\n\n.cards__header-text {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.cards__link {\n  font-size: 14px;\n  font-weight: 700;\n  color: rgb(35, 166, 240);\n  text-decoration: none;\n  letter-spacing: 0.2px;\n  line-height: 24px;\n}\n\n.cards__rating {\n  color: white;\n  display: flex;\n  gap: 5px;\n  padding: 5px;\n  background-color: #252b42;\n  border-radius: 20px;\n}\n\n.cards__rating-icon {\n  width: 16px;\n  height: 16px;\n  background-image: url(../assets/icon-emojione-star.svg);\n}\n\n.cards__rating-number {\n  font-size: 12px;\n  font-weight: 600;\n  letter-spacing: 0.2px;\n  line-height: 16px;\n}\n\n.cards__title {\n  font-size: 16px;\n  font-weight: 700;\n  color: #252b42;\n  letter-spacing: 0.1px;\n  line-height: 24px;\n}\n\n.cards__text-content {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 600;\n  color: #737373;\n  letter-spacing: 0.2px;\n  line-height: 20px; /* 142.857% */\n}\n\n.cards__sales {\n  color: #737373;\n  display: flex;\n  gap: 10px;\n  align-items: center;\n}\n\n.cards__sales-number {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 700;\n  letter-spacing: 0.2px;\n  line-height: 24px;\n}\n\n.cards__sales-image {\n  width: 16px;\n  height: 16px;\n  background-image: url(../assets/icon-sales.svg);\n}\n\n.cards__price {\n  font-weight: 700;\n  letter-spacing: 0.1px;\n  line-height: 24px;\n  display: flex;\n  gap: 10px;\n}\n\n.cards__price--color-gray {\n  font-size: 16px;\n  color: #bdbdbd;\n}\n\n.cards__price--color-green {\n  font-size: 16px;\n  color: #40bb15;\n}\n\n.cards__short-overview {\n  font-size: 12px;\n  font-style: normal;\n  font-weight: 400;\n  color: #737373;\n  letter-spacing: 0.2px;\n  line-height: 16px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 15px 0;\n}\n\n.cards__short-overview-block {\n  display: flex;\n  gap: 5px;\n}\n\n.cards__short-overview-icon {\n  width: 16px;\n  height: 16px;\n}\n\n.cards__short-overview-icon--clock {\n  background-image: url(../assets/icon-clock.svg);\n}\n\n.cards__short-overview-icon--chart {\n  background-image: url(../assets/icon-carbon-chart-area-smooth.svg);\n}\n\n.cards__short-overview-icon--graph {\n  background-image: url(../assets/icon-ant-design-area-chart-outlined.svg);\n}\n\n.cards__button--small {\n  display: flex;\n  gap: 10px;\n  align-items: center;\n  padding: 10px 20px;\n  background-color: transparent;\n  border: 1px solid rgb(35, 166, 240);\n  border-radius: 37px;\n}\n\n.cards__button-text {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 700;\n  color: rgb(35, 166, 240);\n  letter-spacing: 0.2px;\n  line-height: 24px; /* 171.429% */\n}\n\n.cards__button-icon {\n  width: 9px;\n  height: 16px;\n  background-image: url(../assets/icn-arrow-right.svg);\n}\n\n.testimonials {\n  display: grid;\n  justify-content: center;\n}\n\n.testimonials__carousel {\n  display: flex;\n  gap: 15px;\n  max-width: 50dvw;\n  overflow-x: hidden;\n  scroll-snap-type: x mandatory;\n}\n\n.cards__card--active {\n  scroll-snap-type: unset;\n}\n\n.testimonials__item {\n  flex: 1 0 400px;\n  padding: 25px 25px 0 25px;\n  background-color: white;\n  scroll-margin: 5px;\n}\n\n.testimonials__user-cover {\n  display: flex;\n  justify-content: center;\n}\n\n.testimonials__user-cover-image {\n  background-image: url(../assets/testimonial-user-cover-150.png);\n}\n\n.testimonials__content {\n  display: grid;\n  grid-gap: 15px;\n  padding: 30px;\n}\n\n.testimonials__text-content {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 400;\n  text-align: center;\n  letter-spacing: 0.2px;\n  line-height: 20px;\n  max-width: 50%;\n  justify-self: center;\n}\n\n.testimonials__rating {\n  display: flex;\n  justify-content: center;\n  background-color: transparent;\n}\n\n.testimonials__rating-icon {\n  width: 22px;\n  height: 22px;\n  background-image: url(../assets/icn-bxs-full-star.svg);\n}\n\n.testimonials__rating-icon.cards__rating-icon--empty {\n  background-image: url(../assets/icn-empty-star.svg);\n}\n\n.testimonials__employee-fullName {\n  font-size: 16px;\n  font-style: normal;\n  font-weight: 700;\n  color: #252b42;\n  text-align: center;\n  letter-spacing: 0.1px;\n  line-height: 24px; /* 150% */\n}\n\n.testimonials__employee-position {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 700;\n  color: #737373;\n  text-align: center;\n  letter-spacing: 0.2px;\n  line-height: 24px; /* 171.429% */\n}\n\n.form__dispatch--email-subscribe {\n  display: flex;\n  justify-content: center;\n}\n\n.form__dispatch-input {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 600;\n  letter-spacing: 0.2px;\n  line-height: 28px; /* 200% */\n  padding: 15px 20px;\n  width: 40dvw;\n  background: #f9f9f9;\n  border: 1px solid #e6e6e6;\n  border-radius: 5px 0 0 5px;\n}\n\n.button__subscribe {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 600;\n  color: white;\n  letter-spacing: 0.2px;\n  line-height: 28px; /* 200% */\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 15px 22.5px;\n  background-color: rgb(35, 166, 240);\n  border: 1px solid #e6e6e6;\n  border-radius: 0px 5px 5px 0px;\n}\n\n.button__subscribe:hover {\n  background-color: rgba(35, 166, 240, 0.85);\n}\n\n.footer__content {\n  padding: 80px 10%;\n}\n\n.footer__cols {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n  grid-auto-rows: auto;\n  grid-gap: 30px;\n}\n\n.footer__col {\n  display: grid;\n  grid-gap: 20px;\n  grid-template-columns: 2fr 1fr;\n}\n\n.footer__col--1 {\n  grid-gap: 25px;\n}\n\n.footer__col-title {\n  grid-column: 1/3;\n  font-size: 24px;\n  font-style: normal;\n  font-weight: 700;\n  line-height: 32px; /* 133.333% */\n  letter-spacing: 0.1px;\n}\n\n.footer__col-text {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 400;\n  line-height: 20px; /* 142.857% */\n  letter-spacing: 0.2px;\n  grid-column: 1/3;\n}\n\n.footer__links {\n  display: grid;\n  grid-gap: 10px;\n}\n\n.footer__link {\n  font-size: 14px;\n  font-style: normal;\n  font-weight: 700;\n  line-height: 24px; /* 171.429% */\n  letter-spacing: 0.2px;\n}\n\n.footer__media {\n  display: grid;\n  grid-auto-flow: column;\n  justify-content: start;\n  grid-gap: 20px;\n}\n\n.footer__media-icon {\n  width: 24px;\n  height: 24px;\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: cover;\n}\n.footer__media-icon--1 {\n  background-image: url(../assets/ant-design_facebook-filled.svg);\n}\n.footer__media-icon--2 {\n  background-image: url(../assets/ant-design_instagram-outlined.svg);\n}\n.footer__media-icon--3 {\n  background-image: url(../assets/ant-design_twitter-outlined.svg);\n}\n\n@media screen and (max-width: 1350px) {\n  .header.header.main-header .nav.right-block {\n    display: none;\n  }\n  .header.header.main-header .button.dropDown-menu {\n    display: flex;\n  }\n}\n\n@media screen and (max-width: 960px) {\n  .container--primary.welcome-block {\n    padding: 0 5%;\n  }\n  .menu.dropDown-menu {\n    right: 5%;\n  }\n  .header.main-header .nav.left-block .nav-links-list {\n    display: none;\n  }\n  .menu.dropDown-menu .nav.left-block {\n    margin: 1rem;\n    width: auto;\n    height: auto;\n  }\n}\n\n@media screen and (max-width: 900px) {\n  .testimonials__item {\n    flex-basis: fit-content;\n  }\n  .testimonials__carousel {\n    max-width: 300px;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .form__dispatch-input {\n    width: 100%;\n  }\n}\n\n@media screen and (max-width: 750px) {\n  .cards__carousel {\n    width: 400px;\n  }\n}\n\n@media screen and (max-width: 600px) {\n  .container--course-review .sideblock.images {\n    height: 320px;\n    max-width: 80lvw;\n  }\n  .sideblock.images .image.rating {\n    top: 0;\n    right: 10%;\n  }\n  .sideblock.images .main-image {\n    width: 250px;\n    height: 250px;\n    background-size: 250px;\n  }\n  .sideblock.images .image.round-graphic {\n    width: 123px;\n    height: 123px;\n    background-size: 123px;\n  }\n}\n\n@media screen and (max-width: 425px) {\n  .container--info .text.headline-text {\n    font-size: 2em;\n    margin: 2rem 0;\n  }\n  .container--info .text.quote .quote-text {\n    font-size: 1rem;\n    padding-bottom: 2rem;\n  }\n  .sideblock.images .image.image.rating {\n    top: 0;\n    right: -15px;\n  }\n  .cards .card .text .text-content {\n    min-width: min-content;\n  }\n  .container--page-sections {\n    padding: 0 5%;\n  }\n  .cards__card {\n    flex-basis: 290px;\n  }\n  .cards__carousel {\n    width: 290px;\n  }\n  .testimonials__item {\n    flex-basis: 290px;\n    padding: 0;\n  }\n  .testimonials__content {\n    padding: 30px 0;\n  }\n  .testimonials__carousel {\n    max-width: 290px;\n  }\n  .footer__content {\n    padding: 0 5%;\n  }\n}\n\n@media (pointer: none), (pointer: coarse) {\n  .cards__carousel {\n    overflow-x: scroll;\n  }\n  .testimonials__carousel {\n    overflow-x: scroll;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1983,6 +2219,36 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/assets/ant-design_facebook-filled.svg":
+/*!***************************************************!*\
+  !*** ./src/assets/ant-design_facebook-filled.svg ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ant-design_facebook-filled.svg";
+
+/***/ }),
+
+/***/ "./src/assets/ant-design_instagram-outlined.svg":
+/*!******************************************************!*\
+  !*** ./src/assets/ant-design_instagram-outlined.svg ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ant-design_instagram-outlined.svg";
+
+/***/ }),
+
+/***/ "./src/assets/ant-design_twitter-outlined.svg":
+/*!****************************************************!*\
+  !*** ./src/assets/ant-design_twitter-outlined.svg ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "ant-design_twitter-outlined.svg";
+
+/***/ }),
+
 /***/ "./src/assets/home-background.svg":
 /*!****************************************!*\
   !*** ./src/assets/home-background.svg ***!
@@ -2010,6 +2276,26 @@ module.exports = __webpack_require__.p + "icn-arrow-right.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "icn-basket.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icn-bxs-full-star.svg":
+/*!******************************************!*\
+  !*** ./src/assets/icn-bxs-full-star.svg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icn-bxs-full-star.svg";
+
+/***/ }),
+
+/***/ "./src/assets/icn-empty-star.svg":
+/*!***************************************!*\
+  !*** ./src/assets/icn-empty-star.svg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "icn-empty-star.svg";
 
 /***/ }),
 
@@ -2160,6 +2446,16 @@ module.exports = __webpack_require__.p + "rating.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "round-graphics.svg";
+
+/***/ }),
+
+/***/ "./src/assets/testimonial-user-cover-150.png":
+/*!***************************************************!*\
+  !*** ./src/assets/testimonial-user-cover-150.png ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "testimonial-user-cover-150.png";
 
 /***/ })
 
@@ -2313,10 +2609,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var primaryCarousel = document.querySelector('.cards__carousel');
+var secondaryCarousel = document.querySelector('.testimonials__carousel');
 _headerBurgerMenu__WEBPACK_IMPORTED_MODULE_1__.burgerMenu.enableHeaderBurgerMenu();
-_carousel__WEBPACK_IMPORTED_MODULE_2__.carousel.activateCarousel();
+_carousel__WEBPACK_IMPORTED_MODULE_2__.carousel.activateCarousel(primaryCarousel);
+_carousel__WEBPACK_IMPORTED_MODULE_2__.carousel.activateCarousel(secondaryCarousel);
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlefcbd133633edec8028f1.js.map
+//# sourceMappingURL=bundle54e52065baba5aa732dd.js.map
