@@ -3,7 +3,7 @@
 <p>This project is website layout that I used to practice my skills in HTML, CCS and JS. <br>
 The layout itself is Figma free resource: 
   <ul>
-     <li><a href="">Course-Success---simple-website-template</a></li>
+     <li><a href="https://www.figma.com/file/I7saRAs2RpOQiTen034b2I/Course-Success---simple%C2%A0website-template%C2%A0for-beginners-for-course-(Community)?type=design&node-id=0-3&mode=design&t=UmiyqDWIKTbpdWS7-0" _blank>Course-Success---simple-website-template</a></li>
   </ul>
 Because it's that type of project where you need to create a responsive website, I'm sure is isn't good enough. <br>
 I tried to use all knowledge, not without help of big brother and did my best for first website. <br>
