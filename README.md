@@ -20,5 +20,5 @@ I tried to use all knowledge, not without help of big brother and did my best fo
   Link to view project 
 </h4>
 <ul>
-  <li><a href="">Course-Success---simple-website-template - project</a></li>
+  <li><a href="https://koatkoetl.github.io/Landing_Layout--Practice/" target="_blank">Course-Success---simple-website-template - project</a></li>
 </ul> 
