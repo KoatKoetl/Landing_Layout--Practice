@@ -15,9 +15,9 @@ I tried to use all knowledge, not without help of internet and did my best for f
   <li>JS</li>
   <li>Webpack5</li>
 </ul>
-<h2>Project</h2>
+<h2>View work</h2>
 <h4>
-  Link to view project 
+  Link 
 </h4>
 <ul>
   <li><a href="https://koatkoetl.github.io/Landing_Layout--Practice/" target="_blank">Course-Success---simple-website-template - project</a></li>
