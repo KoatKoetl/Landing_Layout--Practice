@@ -20,5 +20,5 @@ I tried to use all knowledge, not without help of internet and did my best for f
   Link 
 </h4>
 <ul>
-  <li><a href="https://koatkoetl.github.io/Landing_Layout--Practice/](https://koatkoetl.github.io/Simple-website-template__Landing_Layout--Practice/)" target="_blank">Course-Success---simple-website-template - project</a></li>
+  <li><a href="https://koatkoetl.github.io/Simple-website-template__Landing_Layout--Practice/" target="_blank">Course-Success---simple-website-template - project</a></li>
 </ul> 
