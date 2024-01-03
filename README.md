@@ -1,4 +1,4 @@
-# Simple-website-template--Landing layout practice
+# Simple-website-template__Sort-of-Education-website
 <h2>Hello everyone!</h2>  <br>
 <p>This project is website layout that I used to practice my skills in HTML, CCS and JS. <br>
 The layout itself is Figma free resource: 
